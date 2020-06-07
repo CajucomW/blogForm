@@ -1,2 +1,20 @@
-<!DOCTYPE html>
 <h1>The form would go here.</h1>
+
+<h2>Share a post</h2>
+<form class="" method="POST">
+    <div>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>Share!</button>
+    </div>
+</form>
+
+<hr />
+
+<div>
+    <h3>{{ post.username }}</h3>
+    <p>{{ post.text }}</p>
+</div>
+
+
+

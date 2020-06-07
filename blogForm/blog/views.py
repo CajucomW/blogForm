@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django import forms
-from .models import BlogPost
+from .models import (BlogPost)
 
 class PostBlog(forms.Form):
     username = forms.CharField(max_length=100)
@@ -21,5 +21,8 @@ def homepage_form(request):
             return redirect('/')
     else:
         form = PostBlog()   
-    context = {}
+    context = {
+        'posts': posts,
+        'form': form,
+    }
     return render(request, 'homepage_form.html', context)
