@@ -9,7 +9,7 @@ class PostBlog(forms.Form):
 
 def homepage_form(request):
     print("---Viewed Homepage---")
-    posts = BlogPost.objects.all()
+    posts = BlogPost.objects.order_by('-created')
     if request.method == 'POST':
         form = PostBlog(request.POST)
         if form.is_valid():
@@ -21,7 +21,8 @@ def homepage_form(request):
             )
             return redirect('/')
     else:
-        form = PostBlog()   
+        form = PostBlog() 
+        
     context = {
         'posts': posts,
         'form': form,
