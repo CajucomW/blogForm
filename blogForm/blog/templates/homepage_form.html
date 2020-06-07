@@ -12,8 +12,10 @@
 <hr />
 
 <div>
-    <h3>{{ post.username }}</h3>
-    <p>{{ post.text }}</p>
+    {% for post in posts %}
+        <h3>{{ post.username }}</h3>
+        <p>{{ post.text }}</p>
+    {% endfor %}
 </div>
 
 

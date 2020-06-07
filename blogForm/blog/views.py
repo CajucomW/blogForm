@@ -3,6 +3,7 @@ from django import forms
 from .models import (BlogPost)
 
 class PostBlog(forms.Form):
+    print("---Used PostBlog---")
     username = forms.CharField(max_length=100)
     text = forms.CharField(widget=forms.Textarea)
 
