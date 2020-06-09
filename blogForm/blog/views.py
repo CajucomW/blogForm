@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django import forms
-from .models import (BlogPost)
+from .models import BlogPost
+from .forms import PostForm
 
 class PostBlog(forms.Form):
     print("---Used PostBlog---")
