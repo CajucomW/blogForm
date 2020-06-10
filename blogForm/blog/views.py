@@ -1,12 +1,24 @@
 from django.shortcuts import render, redirect
+from django.views.generic import ListView, DetailView, CreateView
 from django import forms
 from .models import BlogPost
-from .forms import PostForm
+# from .forms import PostForm
 
 class PostBlog(forms.Form):
     print("---Used PostBlog---")
     username = forms.CharField(max_length=100)
     text = forms.CharField(widget=forms.Textarea)
+
+# class BlogPost(ListView):
+#     print('---BlogPost Loaded---')
+#     model = BlogPost
+#     template_name = "homepage_form.html"
+
+# class AddPost(CreateView):
+#     print('---AddPost Loaded---')
+#     model = BlogPost
+#     template_name = "homepage_form.html"
+#     fields = " __all__ "
 
 def homepage_form(request):
     print("---Viewed Homepage---")
