@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView, CreateView
 from django import forms
 from .models import BlogPost
-# from .forms import PostForm
+from .forms import PostForm
 
 class PostBlog(forms.Form):
     print("---Used PostBlog---")
@@ -31,6 +31,7 @@ def homepage_form(request):
             BlogPost.objects.create(
                 username=username,
                 text=text,
+                created=created,
             )
             return redirect('/')
     else:

@@ -18,8 +18,8 @@
 
         <h3>Share a Post</h3>
         <br>
-        <form action="" method="POST">
-            <div class="form-group">
+        <div class="form-group">
+            <form action="" method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <div class="form-group">
@@ -28,8 +28,8 @@
                             Share!
                     </button>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
 
         <hr />
 
@@ -37,6 +37,7 @@
             {% for post in posts %}
                 <h5>{{ post.username }}</h5>
                 <p>{{ post.text }}</p>
+                <p>{{ post.created }}</p>
             {% endfor %}
         </div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
