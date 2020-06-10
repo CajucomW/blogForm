@@ -9,17 +9,6 @@ class PostBlog(forms.Form):
     username = forms.CharField(max_length=100)
     text = forms.CharField(widget=forms.Textarea)
 
-# class BlogPost(ListView):
-#     print('---BlogPost Loaded---')
-#     model = BlogPost
-#     template_name = "homepage_form.html"
-
-# class AddPost(CreateView):
-#     print('---AddPost Loaded---')
-#     model = BlogPost
-#     form_class = PostForm
-#     template_name = "homepage_form.html"
-
 def homepage_form(request):
     print("---Viewed Homepage---")
     posts = BlogPost.objects.order_by('-created')
