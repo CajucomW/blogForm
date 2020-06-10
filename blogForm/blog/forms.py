@@ -9,5 +9,4 @@ class PostForm(forms.ModelForm):
         widgets = {
             'username': forms.TextInput(attrs={'class': 'form-control'}),
             'text': forms.Textarea(attrs={'class': 'form-control'}),
-            # 'created': forms.DateField(attrs={'class': 'form-control'})
         }

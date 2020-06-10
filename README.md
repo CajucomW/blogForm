@@ -13,7 +13,7 @@ To run the app:
 - once finished, open up browser to localhost:8000
 
 <h3>TODO:</h3>
-<h4>06/08/20</h4>
+<h4>06/09/20</h4>
 <ul>
-    <li>complete styling of <code>csrf_token</code>
-    <li>include dates to the blog entries</li>
+    <li>complete styling of <code>csrf_token</code></li>
+    <li>views.py is a mess. consider using classes instead of functions</li>

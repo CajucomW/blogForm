@@ -17,8 +17,8 @@ class PostBlog(forms.Form):
 # class AddPost(CreateView):
 #     print('---AddPost Loaded---')
 #     model = BlogPost
+#     form_class = PostForm
 #     template_name = "homepage_form.html"
-#     fields = " __all__ "
 
 def homepage_form(request):
     print("---Viewed Homepage---")
@@ -31,7 +31,6 @@ def homepage_form(request):
             BlogPost.objects.create(
                 username=username,
                 text=text,
-                created=created,
             )
             return redirect('/')
     else:
